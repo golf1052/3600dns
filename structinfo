@@ -1,0 +1,16 @@
+typedef struct header_s {
+	unsigned short rcode : 4;
+	unsigned short foo : 3;
+	unsigned short bar : 1;
+	unsigned short baz : 7;
+	unsigned short blah: 1;
+}
+
+16 bit structure.
+2 bytes
+
+bar foo rcode
+blah baz
+
+move rcode first
+put blah before baz
