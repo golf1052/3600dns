@@ -6,6 +6,7 @@ A DNS client program by Sanders Lauture & Chris Kuffert
 This is a project for the class Systems and Networks taught by the glorious professor Alan Mislove. This code does not complete the extra credit. This code is also pretty terrible and probably could be optimized and cleaned up but it works and it's our child...thing. Enjoy.
 
 Readme for the project
+----------------------
 
 We first process the server and port combo by first checking to see if the serverport combo has a colon in it. If it does then there is a port in the combo and we break that off as its own part. We then copy the server into its own character array. If there is not a port number we use the default port number 53. We then construct the header with the approprate information. The struct is specially setup for gcc so that we can just copy the header directly into a character array. We then create the question part by breaking up the name by the period character. We also determine how many characters are between each of the period characters. We then use this information to construct the QNAME. After creating the QNAME we copy that into the a dnsquestion struct. We then copy the header and the question into a buffer so that it is ready to be sent to the server.
 
